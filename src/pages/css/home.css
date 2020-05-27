@@ -1,8 +1,23 @@
+.content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
 .intro {
-    max-width: 50%;
-    margin-left: 3%;
-    margin-right: 3%;
+    max-width: 40%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    height: 85vh;
+}
 
+.intro-item {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.hero-image {
+    height: 45vh;
 }

@@ -23,7 +23,7 @@
     text-decoration: none;
 }
 
-a:hover {
+.nav-item:hover {
     color: #F4D06F;
 }
 

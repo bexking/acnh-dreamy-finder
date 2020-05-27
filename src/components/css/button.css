@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+:root {
+    --primary: #C0F3E3;
+    --previous: #FFFFF5;
+    --next: #C0F3E3;
+}
+
+.btn {
+    font-family: Quicksand, sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    transition: transform 0.1s ease;
+    padding: 3%;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn--primary--solid {
+    background-color: var(--primary);
+    color: #242038;
+    border-radius: 50px;
+    border-color: #61A0AF;
+    border-width: medium;
+}
+
+.btn--next--solid {
+    background-color: var(--primary);
+    color: var(--red);
+    border-radius: 50px;
+    border-color: black;
+    border-width: medium;
+}
+
+.btn--back--outline {
+    background-color: var(--primary);
+    color: var(--red);
+    border-radius: 50px;
+    border-color: green;
+    border-width: medium;
+}
+
+/* button size*/
+
+.btn--large {
+    padding: 10px 20px;
+    font-size: 48px;
+    height: 100px;
+    width: 500px;
+}
+
+.btn--medium {
+    padding: 10px 20px;
+    font-size: 48px;
+    height: 100px;
+    width: 500px;
+}
+
+.btn--small {
+    padding: 15px 30px;
+    font-size: 28px;
+}
