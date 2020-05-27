@@ -1,0 +1,20 @@
+.circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #61A0AF;
+    margin-left:6%;
+    margin-right:6%;
+}
+
+.stepper {
+    display:flex;
+    justify-content: center;
+}
+
+.selected {
+    background-color: #F4D06F;
+}
+
+/*need to add way to identify if circle is selected or not.
+Need to add way to know that selected one needs a different colour and needs the outer circle.*/
