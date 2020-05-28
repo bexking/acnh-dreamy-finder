@@ -35,7 +35,7 @@
 }
 
 .btn--back--outline {
-    background-color: var(--primary);
+    background-color: var(--previous);
     color: var(--red);
     border-radius: 50px;
     border-color: green;
@@ -53,9 +53,9 @@
 
 .btn--medium {
     padding: 10px 20px;
-    font-size: 48px;
-    height: 100px;
-    width: 500px;
+    font-size: 18px;
+    height: 40px;
+    width: 150px;
 }
 
 .btn--small {

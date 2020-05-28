@@ -16,7 +16,9 @@ export default function Header() {
             <h1>Dreamy Finder</h1>
             <div className='stepper'>
                 <div className={`circle ${pageCheck}`}></div>
+                <hr className="line"></hr>
                 <div className={`circle ${pageCheck2}`}></div>
+                <hr className="line"></hr>
                 <div className={`circle ${pageCheck3}`}></div>
             </div>
         </div>

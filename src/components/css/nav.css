@@ -24,6 +24,10 @@
 }
 
 .nav-item:hover {
-    color: #F4D06F;
+    color: #61A0AF;
 }
 
+.selectedPage {
+    color: #F4D06F;
+    background-color: none;
+}

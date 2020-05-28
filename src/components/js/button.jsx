@@ -1,6 +1,7 @@
 import React from 'react'
 import '../css/button.css';
 
+
 const STYLES = [
     "btn--primary--solid",
     "btn--previous--outline",

@@ -16,5 +16,17 @@
     background-color: #F4D06F;
 }
 
+hr{
+    border-width: 1px;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    width: 80px;
+    border-color: #242038;
+    margin-left: 0;
+    margin-right: 0;
+
+}
+
 /*need to add way to identify if circle is selected or not.
 Need to add way to know that selected one needs a different colour and needs the outer circle.*/

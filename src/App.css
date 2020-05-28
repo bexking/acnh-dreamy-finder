@@ -5,6 +5,22 @@ html, body {
   height: 100vh;
 }
 
+h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
+
+h2 {
+  font-family: Quicksand, sans-serif;
+  font-weight: 500;
+  margin-left: 3%;
+  margin-top: 2.5%;
+}
+
 /* .App-logo {
   height: 40vmin;
   pointer-events: none;
