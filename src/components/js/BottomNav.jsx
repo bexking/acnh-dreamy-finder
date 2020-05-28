@@ -12,8 +12,8 @@ export default function BottomNav() {
     let i = locations.indexOf(location);
 
     return (
-        
         <div className="container">
+            {i>=1 && 
             <Link to={locations[i-1]}>
                 <Button
                     type="button"
@@ -21,7 +21,8 @@ export default function BottomNav() {
                     buttonSize="btn--medium"
                 >Go Back
                 </Button>
-            </Link>
+            </Link>}
+            {i<2 &&
             <Link to={locations[i+1]}>
                 <Button
                     type="button"
@@ -29,7 +30,16 @@ export default function BottomNav() {
                     buttonSize="btn--medium"
                 >Next Step
                 </Button>
-            </Link>
+            </Link>}
+            {i>=2 &&
+            <Link to={locations[i-2]}>
+                <Button
+                    type="button"
+                    buttonStyle="btn--next--solid"
+                    buttonSize="btn--medium"
+                >Start Over
+                </Button>
+            </Link>}
         </div>
     )
 }
