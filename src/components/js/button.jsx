@@ -4,7 +4,7 @@ import '../css/button.css';
 
 const STYLES = [
     "btn--primary--solid",
-    "btn--previous--outline",
+    "btn--previous--solid",
     "btn--next--solid",
 ]
 
