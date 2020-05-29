@@ -1,0 +1,11 @@
+.circ--primary {
+    stroke:#61A0AF;
+    stroke-width: 2; 
+    fill:#E0F9EC;
+}
+
+.circ--selected {
+    stroke:#61A0AF;
+    stroke-width: 3;
+    fill: white;
+}
