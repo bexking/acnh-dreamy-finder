@@ -7,7 +7,7 @@ const STYLES = [
 ]
 
 export const RoundButton = ({
-    selection
+    selection, onClick
 }) => {
 
     const checkRoundButtonStyle = selection 
@@ -15,7 +15,7 @@ export const RoundButton = ({
         : STYLES[0];
 
     return (
-        <svg height="100" width="100" className={`btn ${checkRoundButtonStyle} `} onClick={()=> {}}>
+        <svg height="100" width="100" className={`btn ${checkRoundButtonStyle}`} onClick={onClick}>
             <circle cx="50" cy="50" r="40"/>
         </svg>
     )
