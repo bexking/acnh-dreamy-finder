@@ -9,3 +9,8 @@
     stroke-width: 3;
     fill: white;
 }
+
+.ButtonContainer {
+    display: flex;
+    justify-content: space-evenly;
+}

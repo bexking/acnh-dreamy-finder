@@ -1,0 +1,14 @@
+.ClearButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.ButtonContainer {
+    background-color: #C0F3E3;
+    border-radius: 50px;
+    width: 93%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -7,20 +7,17 @@ const STYLES = [
 ]
 
 export const RoundButton = ({
-    onClick, 
-    buttonStyle, 
+    selection
 }) => {
-    const [selected, setSelected] = useState(false);
 
-    const checkRoundButtonStyle = selected 
+    const checkRoundButtonStyle = selection 
         ? STYLES[1]
         : STYLES[0];
 
     return (
-        <svg height="100" width="100" className={`btn ${checkRoundButtonStyle} `} onClick={()=> setSelected(true)}>
+        <svg height="100" width="100" className={`btn ${checkRoundButtonStyle} `} onClick={()=> {}}>
             <circle cx="50" cy="50" r="40"/>
         </svg>
     )
 
 }
-

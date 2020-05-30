@@ -11,7 +11,6 @@
     font-weight: 700;
     font-size: 48px;
     transition: transform 0.1s ease;
-    padding: 3%;
 }
 
 .btn:hover {
@@ -24,6 +23,7 @@
     border-radius: 50px;
     border-color: #61A0AF;
     border-width: medium;
+    padding: 3%;
 }
 
 .btn--next--solid {
@@ -32,6 +32,7 @@
     border-radius: 50px;
     border-color: black;
     border-width: medium;
+    padding: 3%;
 }
 
 .btn--previous--solid {
@@ -40,6 +41,7 @@
     border-radius: 50px;
     border-color: #61A0AF;;
     border-width: medium;
+    padding: 3%;
 }
 
 /* button size*/
@@ -62,6 +64,8 @@
 }
 
 .btn--small {
-    padding: 15px 30px;
-    font-size: 28px;
+    padding: none;
+    font-size: 14px;
+    height: 30px;
+    width: 125px;
 }

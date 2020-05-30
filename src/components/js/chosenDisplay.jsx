@@ -1,17 +1,50 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../css/ChosenDisplay.css';
+import { RoundButton } from '../../components/js/RoundButton';
+import { Button } from '../../components/js/button';
 
 export default function ChosenDisplay() {
+    const [selectedButton, setSelectedButton] = useState(0);
+
+    let buttons = [
+        <RoundButton />,
+        <RoundButton />,
+        <RoundButton />,
+        <RoundButton />,
+        <RoundButton />,
+        <RoundButton />,
+        <RoundButton />,
+        <RoundButton />,
+        <RoundButton />
+    ];
+
     return (
         <div>
-            <div>
-                
-                {/* /* images - need to be 9 on one page and 10 on another
-            images need to be selectable*
-            image changes to selected onclick.
-            selected image can be replaced by clicking villager image
-            then needs to access the api information/*/}
+            <div className="ButtonContainer">
+                <RoundButton
+                    selection={true}
+                />
+                {buttons}
 
+
+
+
+                <div className="ClearButtons">
+
+                <Button
+                    type="button"
+                    buttonStyle="btn--previous--solid"
+                    buttonSize="btn--small"
+                >Clear Selected
+                </Button>
+
+                <Button
+                    type="button"
+                    buttonStyle="btn--previous--solid"
+                    buttonSize="btn--small"
+                >Clear All
+                </Button>
+                </div>
 
             </div>
 
