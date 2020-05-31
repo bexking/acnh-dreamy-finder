@@ -28,16 +28,14 @@
 
 .btn--next--solid {
     background-color: var(--primary);
-    color: var(--red);
     border-radius: 50px;
-    border-color: black;
+    border-color: #61A0AF;
     border-width: medium;
     padding: 3%;
 }
 
 .btn--previous--solid {
     background-color: var(--previous);
-    color: var(--red);
     border-radius: 50px;
     border-color: #61A0AF;;
     border-width: medium;
@@ -60,7 +58,6 @@
     width: 150px;
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 5%;
 }
 
 .btn--small {

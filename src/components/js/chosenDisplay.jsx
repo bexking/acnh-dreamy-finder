@@ -6,6 +6,8 @@ import { Button } from '../../components/js/button';
 export default function ChosenDisplay() {
     const [selectedButton, setSelectedButton] = useState(0);
     const [villagerInfo, setVillagerInfo] = useState([]);
+    const [selectedVillagers, setSelectedVillagers] = useState([]);
+
     useEffect(() => {
         fetch('http://acnhapi.com/v1/villagers')
         .then(response => response.json())
@@ -20,6 +22,15 @@ export default function ChosenDisplay() {
     let buttons = [];
     let villagers = [];
 
+    function villagersSelect(id) {
+        return function() {
+            let newSelectedVillagers = selectedVillagers.slice();
+            newSelectedVillagers[selectedButton]=id;
+            setSelectedVillagers(newSelectedVillagers);
+            setSelectedButton(selectedButton+1);
+        };
+    }
+
     function mkSelectorFunc(num) {
         return function() {
             setSelectedButton(num);
@@ -29,7 +40,7 @@ export default function ChosenDisplay() {
     let i;
     for (i = 0; i < 9; i++) {
         let selector = mkSelectorFunc(i);
-        buttons[i]=<RoundButton selection={selectedButton == i} onClick={selector} key={i}/>;
+        buttons[i]=<RoundButton selection={selectedButton == i} villager={selectedVillagers[i]} onClick={selector} key={i}/>;
     }
 
     // for (i = 1; i < 392; i++) {
@@ -37,12 +48,11 @@ export default function ChosenDisplay() {
     //     villagers[i-1]=<RoundButton selection={false} key={i} villager={i}/>;
     // }
 
-    villagers = villagerInfo.map(villagerDeets => <div className="villagerOptions">
-        <RoundButton selection={false} villager={villagerDeets.id}/>
+    villagers = villagerInfo.map(villagerDeets => <div className="villagerOptions" key={villagerDeets.id}>
+        <RoundButton selection={false} villager={villagerDeets.id} onClick={villagersSelect(villagerDeets.id)}/>
         <p>{villagerDeets.name["name-USen"]}</p>
+        
     </div>)
-
-    console.log(villagerInfo[0]);
 
     return (
         <div>
