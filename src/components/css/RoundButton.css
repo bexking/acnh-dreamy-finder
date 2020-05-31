@@ -14,3 +14,7 @@
     display: flex;
     justify-content: space-evenly;
 }
+
+image {
+    opacity: 90%;
+}

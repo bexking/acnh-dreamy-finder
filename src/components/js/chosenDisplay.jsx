@@ -1,10 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../css/ChosenDisplay.css';
 import { RoundButton } from '../../components/js/RoundButton';
 import { Button } from '../../components/js/button';
 
 export default function ChosenDisplay() {
     const [selectedButton, setSelectedButton] = useState(0);
+    const [villagerInfo, setVillagerInfo] = useState([]);
+    useEffect(() => {
+        fetch('http://acnhapi.com/v1/villagers')
+        .then(response => response.json())
+        .then(data => {
+            setVillagerInfo(Object.values(data));
+        })
+    }, []);
+
+
     // const buttonNum = 9;
 
     let buttons = [];
@@ -22,12 +32,18 @@ export default function ChosenDisplay() {
         buttons[i]=<RoundButton selection={selectedButton == i} onClick={selector} key={i}/>;
     }
 
-    for (i = 1; i < 392; i++) {
-        // let selector = mkSelectorFunc(i);
-        villagers[i-1]=<RoundButton selection={false} key={i} villager={i}/>;
-    }
+    // for (i = 1; i < 392; i++) {
+    //     // let selector = mkSelectorFunc(i);
+    //     villagers[i-1]=<RoundButton selection={false} key={i} villager={i}/>;
+    // }
 
-    console.log(selectedButton);
+    villagers = villagerInfo.map(villagerDeets => <div className="villagerOptions">
+        <RoundButton selection={false} villager={villagerDeets.id}/>
+        <p>{villagerDeets.name["name-USen"]}</p>
+    </div>)
+
+    console.log(villagerInfo[0]);
+
     return (
         <div>
             <div className="ButtonContainer">
