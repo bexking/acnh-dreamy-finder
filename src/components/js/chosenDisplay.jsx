@@ -8,6 +8,7 @@ export default function ChosenDisplay() {
     // const buttonNum = 9;
 
     let buttons = [];
+    let villagers = [];
 
     function mkSelectorFunc(num) {
         return function() {
@@ -19,6 +20,11 @@ export default function ChosenDisplay() {
     for (i = 0; i < 9; i++) {
         let selector = mkSelectorFunc(i);
         buttons[i]=<RoundButton selection={selectedButton == i} onClick={selector} key={i}/>;
+    }
+
+    for (i = 1; i < 392; i++) {
+        // let selector = mkSelectorFunc(i);
+        villagers[i-1]=<RoundButton selection={false} key={i} villager={i}/>;
     }
 
     console.log(selectedButton);
@@ -42,11 +48,18 @@ export default function ChosenDisplay() {
                         buttonSize="btn--small"
                     >Clear All
                     </Button>
+                    {/* /* buttons clear selected 
+            Clear selected to make the currently selected swap picture
+            Clear all to reset back to all mystery pictures and first villager space selected*/}
                 </div>
 
             </div>
 
-            <div>{/* buttons clear selected */}</div>
+        
+
+            <div className="Villagers">
+                    {villagers}
+            </div>
             
         </div>
     )
