@@ -1,33 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import '../css/ChosenDisplay.css';
 import { RoundButton } from '../../components/js/RoundButton';
 import { Button } from '../../components/js/button';
 
-export default function ChosenDisplay({spaces, selectedVillagers, setSelectedVillagers}) {
+export default function ChosenDisplay({spaces, selectedVillagers, setSelectedVillagers, villagerInfo}) {
     const [selectedButton, setSelectedButton] = useState(0);
-    const [villagerInfo, setVillagerInfo] = useState([]);
     const [vLookup, setVLookup] = useState("");
-
-    useEffect(() => {
-        fetch('http://acnhapi.com/v1/villagers')
-        .then(response => response.json())
-        .then(data => {
-            let unsorted = Object.values(data);
-            unsorted.sort((a,b) => {
-                if (a.name["name-USen"] < b.name["name-USen"]) {
-                    return -1;
-                  }
-                  if (a.name["name-USen"] > b.name["name-USen"]) {
-                    return 1;
-                  }
-                  return 0;
-            })
-            setVillagerInfo(unsorted);
-        })
-    }, []);
-
-
-    // const buttonNum = 9;
 
     let buttons = [];
     let villagers = [];

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route} from "react-router-dom";
 import Nav from './components/js/nav.js';
 import "./App.css";
@@ -13,6 +13,25 @@ import about from "./pages/js/about";
 function App() {
   const [selectedVillagers, setSelectedVillagers] = useState([]);
   const [selectedDrVillagers, setSelectedDrVillagers] = useState([]);
+  const [villagerInfo, setVillagerInfo] = useState([]);
+
+  useEffect(() => {
+    fetch('http://acnhapi.com/v1/villagers')
+    .then(response => response.json())
+    .then(data => {
+        let unsorted = Object.values(data);
+        unsorted.sort((a,b) => {
+            if (a.name["name-USen"] < b.name["name-USen"]) {
+                return -1;
+              }
+              if (a.name["name-USen"] > b.name["name-USen"]) {
+                return 1;
+              }
+              return 0;
+        })
+        setVillagerInfo(unsorted);
+    })
+}, []);
 
   return (
     <div className="App">
@@ -20,12 +39,14 @@ function App() {
           <Nav />
           <Route path="/home" component={home} />
           <Route path="/CurrentVillager"
-            render={()=> (<CurrentVillager selectedVillagers={selectedVillagers} setSelectedVillagers={setSelectedVillagers}/>)}
+            render={()=> (<CurrentVillager villagerInfo={villagerInfo} selectedVillagers={selectedVillagers} setSelectedVillagers={setSelectedVillagers}/>)}
           />
           <Route path="/DreamVillager"
-            render={()=> (<DreamVillager selectedVillagers={selectedDrVillagers} setSelectedVillagers={setSelectedDrVillagers}/>)}
+            render={()=> (<DreamVillager villagerInfo={villagerInfo} selectedVillagers={selectedDrVillagers} setSelectedVillagers={setSelectedDrVillagers}/>)}
           />
-          <Route path="/Results" component={Results} />
+          <Route path="/Results" 
+            render={()=> (<Results villagerInfo={villagerInfo} selectedVillagers={selectedVillagers} selectedDrVillagers={selectedDrVillagers}/>)} 
+          />
           <Route path="/about" component={about} />
         </Router>
     </div>
