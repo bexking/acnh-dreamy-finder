@@ -27,7 +27,10 @@ export default function ChosenDisplay() {
             let newSelectedVillagers = selectedVillagers.slice();
             newSelectedVillagers[selectedButton]=id;
             setSelectedVillagers(newSelectedVillagers);
-            setSelectedButton(selectedButton+1);
+            if (selectedButton < 8) 
+            {
+                setSelectedButton(selectedButton+1);
+            }
         };
     }
 
@@ -48,11 +51,16 @@ export default function ChosenDisplay() {
     //     villagers[i-1]=<RoundButton selection={false} key={i} villager={i}/>;
     // }
 
-    villagers = villagerInfo.map(villagerDeets => <div className="villagerOptions" key={villagerDeets.id}>
-        <RoundButton selection={false} villager={villagerDeets.id} onClick={villagersSelect(villagerDeets.id)}/>
-        <p>{villagerDeets.name["name-USen"]}</p>
+    villagers = villagerInfo.map(villagerDeets => {
+        if (selectedVillagers.includes(villagerDeets.id)){
+            return;
+        }
+        return <div className="villagerOptions" key={villagerDeets.id}>
+            <RoundButton selection={false} villager={villagerDeets.id} onClick={villagersSelect(villagerDeets.id)}/>
+            <p>{villagerDeets.name["name-USen"]}</p>
+        </div>
         
-    </div>)
+    })
 
     return (
         <div>
