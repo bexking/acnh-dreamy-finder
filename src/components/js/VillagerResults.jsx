@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import '../css/VillagerResults.css';
 
 export default function VillagerResults({selectedVillagers, dreamy, villagerInfo}) {
-    
+    const [tLookup, setTLookup] = useState("");
+
     let dreamyDeets = villagerInfo.filter(dreamyInfo => {
         return dreamyInfo.id == dreamy
     })[0];
@@ -18,15 +20,21 @@ export default function VillagerResults({selectedVillagers, dreamy, villagerInfo
 
     let sVillagerSameSp = selectedDeets.filter(animals => {
         return animals.species == dreamyDeets.species
-    })
+    });
 
     let pEachIsland = ((1/35)*(1/(numInSpecies.length-sVillagerSameSp.length))*100).toFixed(2);
 
+    let numTickets = tLookup;
+
+    let pWithTickets = ((1.0-((1.0-(pEachIsland/100))**numTickets))*100).toFixed(2);
+
+    
+
     return (
-        <div>
+        <div className="resultCard">
             <div className = "vImage">
                 <h3>{dreamyDeets.name["name-USen"]}</h3> 
-                <img src={dreamyDeets.image_uri} alt={`${dreamyDeets.name["name-USen"]} image`} />
+                <img className="vImage" src={dreamyDeets.image_uri} alt={`${dreamyDeets.name["name-USen"]} image`} />
             </div>
 
             <div className = "vStats">
@@ -38,12 +46,13 @@ export default function VillagerResults({selectedVillagers, dreamy, villagerInfo
                 <div className="pTickets">
                     {/* Type how many Nook Mile Tickets you have to see your overall chance: */}
                     <h3></h3>
-                    <input type="text"></input>
-                    <label>tickets = </label>
+                    <input type="number" value={tLookup} onChange={e => setTLookup(e.target.value)}></input>
+                    <label> tickets = </label>
                     {/* total% */}
-                    <h3></h3>
+                    <h3> &nbsp;{pWithTickets}%</h3>
                     <p>chance overall</p>
                 </div>
+
             </div>
         </div>
     )

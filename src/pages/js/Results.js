@@ -13,7 +13,7 @@ export default function Results({villagerInfo, selectedVillagers, selectedDrVill
         <div>
             <Header />
             <h2>3. Results</h2>
-            {eachDreamy}
+            <div className="allResults">{eachDreamy}</div>
             <BottomNav />
         </div>
     )

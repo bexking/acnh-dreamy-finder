@@ -1,0 +1,16 @@
+.resultCard {
+    margin-left: 3%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+.vImage {
+    border-radius: 15px;
+    margin-right: 2%;
+}
+
+.pTickets {
+    display: flex;
+    align-items: center;
+}
