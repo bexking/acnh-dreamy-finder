@@ -9,7 +9,7 @@ export default function CurrentVillager() {
         <div>
             <Header />
             <h2>1. Select Your Current Villagers</h2>
-            <ChosenDisplay />
+            <ChosenDisplay spaces={9}/>
             <BottomNav />
         </div>
     )

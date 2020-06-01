@@ -3,7 +3,7 @@ import '../css/ChosenDisplay.css';
 import { RoundButton } from '../../components/js/RoundButton';
 import { Button } from '../../components/js/button';
 
-export default function ChosenDisplay() {
+export default function ChosenDisplay({spaces}) {
     const [selectedButton, setSelectedButton] = useState(0);
     const [villagerInfo, setVillagerInfo] = useState([]);
     const [selectedVillagers, setSelectedVillagers] = useState([]);
@@ -38,7 +38,7 @@ export default function ChosenDisplay() {
             let newSelectedVillagers = selectedVillagers.slice();
             newSelectedVillagers[selectedButton]=id;
             setSelectedVillagers(newSelectedVillagers);
-            if (selectedButton < 8) 
+            if (selectedButton < spaces-1) 
             {
                 setSelectedButton(selectedButton+1);
             }
@@ -52,7 +52,7 @@ export default function ChosenDisplay() {
       }
     
     let i;
-    for (i = 0; i < 9; i++) {
+    for (i = 0; i < spaces; i++) {
         let selector = mkSelectorFunc(i);
         buttons[i]=<RoundButton selection={selectedButton == i} villager={selectedVillagers[i]} onClick={selector} key={i}/>;
     }
