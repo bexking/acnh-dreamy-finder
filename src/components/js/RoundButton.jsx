@@ -7,7 +7,7 @@ const STYLES = [
 ]
 
 export const RoundButton = ({
-    selection, onClick, villager
+    selection, onClick, villager, name
 }) => {
 
     const checkRoundButtonStyle = selection 
@@ -26,6 +26,7 @@ export const RoundButton = ({
             </defs>
             <circle cx="50" cy="50" r="40" />
             <circle cx="50" cy="50" r="40" fill={`url(#image${checkVillagerNumber})`}/>
+            <title>{`${name} icon`}</title>
         </svg>
     )
 

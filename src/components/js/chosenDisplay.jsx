@@ -62,7 +62,7 @@ export default function ChosenDisplay() {
             return;
         }
         return <div className="villagerOptions" key={villagerDeets.id}>
-            <RoundButton selection={false} villager={villagerDeets.id} onClick={villagersSelect(villagerDeets.id)}/>
+            <RoundButton selection={false} villager={villagerDeets.id} name={villagerDeets.name["name-USen"]} onClick={villagersSelect(villagerDeets.id)}/>
             <p>{villagerDeets.name["name-USen"]}</p>
         </div>       
     })
@@ -78,6 +78,11 @@ export default function ChosenDisplay() {
                         type="button"
                         buttonStyle="btn--previous--solid"
                         buttonSize="btn--small"
+                        onClick={() => {
+                            let newSelectedVillagers = selectedVillagers.slice();
+                            newSelectedVillagers[selectedButton]=undefined;
+                            setSelectedVillagers(newSelectedVillagers); 
+                        }}
                     >Clear Selected
                     </Button>
 
@@ -85,11 +90,9 @@ export default function ChosenDisplay() {
                         type="button"
                         buttonStyle="btn--previous--solid"
                         buttonSize="btn--small"
+                        onClick={() => setSelectedVillagers([]) }
                     >Clear All
                     </Button>
-                    {/* /* buttons clear selected 
-            Clear selected to make the currently selected swap picture
-            Clear all to reset back to all mystery pictures and first villager space selected*/}
                 </div>
 
             </div>
