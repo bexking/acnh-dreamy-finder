@@ -3,10 +3,9 @@ import '../css/ChosenDisplay.css';
 import { RoundButton } from '../../components/js/RoundButton';
 import { Button } from '../../components/js/button';
 
-export default function ChosenDisplay({spaces}) {
+export default function ChosenDisplay({spaces, selectedVillagers, setSelectedVillagers}) {
     const [selectedButton, setSelectedButton] = useState(0);
     const [villagerInfo, setVillagerInfo] = useState([]);
-    const [selectedVillagers, setSelectedVillagers] = useState([]);
     const [vLookup, setVLookup] = useState("");
 
     useEffect(() => {
@@ -63,7 +62,7 @@ export default function ChosenDisplay({spaces}) {
         }
         return <div className="villagerOptions" key={villagerDeets.id}>
             <RoundButton selection={false} villager={villagerDeets.id} name={villagerDeets.name["name-USen"]} onClick={villagersSelect(villagerDeets.id)}/>
-            <p>{villagerDeets.name["name-USen"]}</p>
+            <p className="vNames">{villagerDeets.name["name-USen"]}</p>
         </div>       
     })
 
