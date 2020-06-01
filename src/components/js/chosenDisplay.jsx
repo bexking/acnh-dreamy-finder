@@ -12,7 +12,17 @@ export default function ChosenDisplay() {
         fetch('http://acnhapi.com/v1/villagers')
         .then(response => response.json())
         .then(data => {
-            setVillagerInfo(Object.values(data));
+            let unsorted = Object.values(data);
+            unsorted.sort((a,b) => {
+                if (a.name["name-USen"] < b.name["name-USen"]) {
+                    return -1;
+                  }
+                  if (a.name["name-USen"] > b.name["name-USen"]) {
+                    return 1;
+                  }
+                  return 0;
+            })
+            setVillagerInfo(unsorted);
         })
     }, []);
 

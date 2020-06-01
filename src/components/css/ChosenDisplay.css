@@ -26,7 +26,7 @@
 .Villagers{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: left;
     max-width: 95%;
     margin-left: auto;
     margin-right: auto;
