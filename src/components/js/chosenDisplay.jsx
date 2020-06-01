@@ -7,6 +7,7 @@ export default function ChosenDisplay() {
     const [selectedButton, setSelectedButton] = useState(0);
     const [villagerInfo, setVillagerInfo] = useState([]);
     const [selectedVillagers, setSelectedVillagers] = useState([]);
+    const [vLookup, setVLookup] = useState("");
 
     useEffect(() => {
         fetch('http://acnhapi.com/v1/villagers')
@@ -56,20 +57,14 @@ export default function ChosenDisplay() {
         buttons[i]=<RoundButton selection={selectedButton == i} villager={selectedVillagers[i]} onClick={selector} key={i}/>;
     }
 
-    // for (i = 1; i < 392; i++) {
-    //     // let selector = mkSelectorFunc(i);
-    //     villagers[i-1]=<RoundButton selection={false} key={i} villager={i}/>;
-    // }
-
     villagers = villagerInfo.map(villagerDeets => {
-        if (selectedVillagers.includes(villagerDeets.id)){
+        if (selectedVillagers.includes(villagerDeets.id) || !villagerDeets.name["name-USen"].toLowerCase().startsWith(vLookup.toLowerCase())) {
             return;
         }
         return <div className="villagerOptions" key={villagerDeets.id}>
             <RoundButton selection={false} villager={villagerDeets.id} onClick={villagersSelect(villagerDeets.id)}/>
             <p>{villagerDeets.name["name-USen"]}</p>
-        </div>
-        
+        </div>       
     })
 
     return (
@@ -99,7 +94,10 @@ export default function ChosenDisplay() {
 
             </div>
 
-        
+            <div className="textSearch">
+                <input className="vSearch" type="text" placeholder="Type villager name here" value={vLookup} onChange={e => setVLookup(e.target.value)}></input>
+            </div>
+
 
             <div className="Villagers">
                     {villagers}
