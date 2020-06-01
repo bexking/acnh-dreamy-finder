@@ -42,7 +42,7 @@ function App() {
             render={()=> (<CurrentVillager villagerInfo={villagerInfo} selectedVillagers={selectedVillagers} setSelectedVillagers={setSelectedVillagers}/>)}
           />
           <Route path="/DreamVillager"
-            render={()=> (<DreamVillager villagerInfo={villagerInfo} selectedVillagers={selectedDrVillagers} setSelectedVillagers={setSelectedDrVillagers}/>)}
+            render={()=> (<DreamVillager villagerInfo={villagerInfo} selectedVillagers={selectedDrVillagers} setSelectedVillagers={setSelectedDrVillagers} prevSelectedVillagers={selectedVillagers}/>)}
           />
           <Route path="/Results" 
             render={()=> (<Results villagerInfo={villagerInfo} selectedVillagers={selectedVillagers} selectedDrVillagers={selectedDrVillagers}/>)} 

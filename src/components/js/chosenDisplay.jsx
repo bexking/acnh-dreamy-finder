@@ -3,7 +3,7 @@ import '../css/ChosenDisplay.css';
 import { RoundButton } from '../../components/js/RoundButton';
 import { Button } from '../../components/js/button';
 
-export default function ChosenDisplay({spaces, selectedVillagers, setSelectedVillagers, villagerInfo}) {
+export default function ChosenDisplay({spaces, selectedVillagers, setSelectedVillagers, villagerInfo, prevSelectedVillagers}) {
     const [selectedButton, setSelectedButton] = useState(0);
     const [vLookup, setVLookup] = useState("");
 
@@ -35,7 +35,7 @@ export default function ChosenDisplay({spaces, selectedVillagers, setSelectedVil
     }
 
     villagers = villagerInfo.map(villagerDeets => {
-        if (selectedVillagers.includes(villagerDeets.id) || !villagerDeets.name["name-USen"].toLowerCase().startsWith(vLookup.toLowerCase())) {
+        if (selectedVillagers.includes(villagerDeets.id) || !villagerDeets.name["name-USen"].toLowerCase().startsWith(vLookup.toLowerCase()) || prevSelectedVillagers.includes(villagerDeets.id) ) {
             return;
         }
         return <div className="villagerOptions" key={villagerDeets.id}>

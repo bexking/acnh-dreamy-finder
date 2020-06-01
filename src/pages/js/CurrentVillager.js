@@ -8,7 +8,7 @@ export default function CurrentVillager({selectedVillagers, setSelectedVillagers
         <div>
             <Header />
             <h2>1. Select Your Current Villagers</h2>
-            <ChosenDisplay spaces={9} villagerInfo={villagerInfo} selectedVillagers={selectedVillagers} setSelectedVillagers={setSelectedVillagers}/>
+            <ChosenDisplay spaces={9} villagerInfo={villagerInfo} selectedVillagers={selectedVillagers} setSelectedVillagers={setSelectedVillagers} prevSelectedVillagers={[]}/>
             <BottomNav />
         </div>
     )
