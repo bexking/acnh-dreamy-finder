@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route} from "react-router-dom";
 import Nav from './components/js/nav.js';
 import "./App.css";
 
-import home from "./pages/js/home";
+import Home from "./pages/js/Home";
 import CurrentVillager from "./pages/js/CurrentVillager";
 import DreamVillager from "./pages/js/DreamVillager";
 import Results from "./pages/js/Results";
@@ -36,8 +36,10 @@ function App() {
   return (
     <div className="App">
       <Router>
-          <Nav />
-          <Route path="/home" component={home} />
+          <Nav setSelectedVillagers={setSelectedVillagers} setSelectedDrVillagers={setSelectedDrVillagers}/>
+          <Route path="/home"
+            render={()=> (<Home setSelectedVillagers={setSelectedVillagers} setSelectedDrVillagers={setSelectedDrVillagers}/>)}
+          />
           <Route path="/CurrentVillager"
             render={()=> (<CurrentVillager villagerInfo={villagerInfo} selectedVillagers={selectedVillagers} setSelectedVillagers={setSelectedVillagers}/>)}
           />
@@ -45,7 +47,7 @@ function App() {
             render={()=> (<DreamVillager villagerInfo={villagerInfo} selectedVillagers={selectedDrVillagers} setSelectedVillagers={setSelectedDrVillagers} prevSelectedVillagers={selectedVillagers}/>)}
           />
           <Route path="/Results" 
-            render={()=> (<Results villagerInfo={villagerInfo} selectedVillagers={selectedVillagers} selectedDrVillagers={selectedDrVillagers}/>)} 
+            render={()=> (<Results villagerInfo={villagerInfo} selectedVillagers={selectedVillagers} selectedDrVillagers={selectedDrVillagers} setSelectedVillagers={setSelectedVillagers} setSelectedDrVillagers={setSelectedDrVillagers}/>)} 
           />
           <Route path="/about" component={about} />
         </Router>

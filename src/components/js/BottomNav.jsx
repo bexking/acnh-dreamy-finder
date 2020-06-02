@@ -4,7 +4,7 @@ import { Button } from './button';
 import { Link } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
 
-export default function BottomNav() {
+export default function BottomNav({setSelectedVillagers, setSelectedDrVillagers}) {
     
     let location = useLocation().pathname;
     console.log(location);
@@ -37,7 +37,10 @@ export default function BottomNav() {
                     type="button"
                     buttonStyle="btn--next--solid"
                     buttonSize="btn--medium"
-                >Start Over
+                    onClick={()=>{
+                        setSelectedVillagers([]);
+                        setSelectedDrVillagers([]);
+                        }}>Start Over
                 </Button>
             </Link>}
         </div>

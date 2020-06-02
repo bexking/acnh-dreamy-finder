@@ -5,7 +5,7 @@ import homeIcon from "../../assets/home-selected.png"
 import homeIcon2 from "../../assets/home-unselected.png"
 import { useLocation } from 'react-router-dom';
 
-export default function Nav() {
+export default function Nav({setSelectedVillagers, setSelectedDrVillagers}) {
 
     let location = useLocation().pathname;
     let pageCheck = location == "/home" ? "selectedPage" : "unselected";
@@ -26,7 +26,10 @@ export default function Nav() {
             <Link to="/home" className={`nav-item ${pageCheck}`}>
                 <img id="home-img" src={homeImg} alt="Home"/>
             </Link>
-            <Link to="/CurrentVillager" className={`nav-item ${pageCheck2}`}>Dreamy Finder</Link>
+            <Link to="/CurrentVillager" className={`nav-item ${pageCheck2}`} onClick={()=>{
+                    setSelectedVillagers([]);
+                    setSelectedDrVillagers([]);
+                    }}>Dreamy Finder</Link>
             <Link to="/about" className={`nav-item ${pageCheck3}`}>About</Link>
         </div>
     )

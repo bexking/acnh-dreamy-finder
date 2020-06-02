@@ -3,7 +3,7 @@ import Header from '../../components/js/header.jsx'
 import BottomNav from '../../components/js/BottomNav.jsx'
 import VillagerResults from '../../components/js/VillagerResults.jsx'
 
-export default function Results({villagerInfo, selectedVillagers, selectedDrVillagers}) {
+export default function Results({villagerInfo, selectedVillagers, selectedDrVillagers, setSelectedVillagers, setSelectedDrVillagers}) {
 
     let eachDreamy = selectedDrVillagers.map(dreamy => {
       return <VillagerResults villagerInfo={villagerInfo} selectedVillagers={selectedVillagers} dreamy={dreamy}/>
@@ -14,7 +14,7 @@ export default function Results({villagerInfo, selectedVillagers, selectedDrVill
             <Header />
             <h2>3. Results</h2>
             <div className="allResults">{eachDreamy}</div>
-            <BottomNav />
+            <BottomNav setSelectedVillagers={setSelectedVillagers} setSelectedDrVillagers={setSelectedDrVillagers} />
         </div>
     )
 }
