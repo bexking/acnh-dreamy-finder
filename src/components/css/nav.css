@@ -31,3 +31,9 @@
     color: #F4D06F;
     background-color: none;
 }
+
+@media only screen and (max-width: 1242px) {
+    .main-nav {
+        font-size: 18px;
+    }
+}

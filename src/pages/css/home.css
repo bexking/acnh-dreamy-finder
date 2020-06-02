@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    
 
 }
 
@@ -21,3 +22,25 @@
 .hero-image {
     height: 45vh;
 }
+
+@media only screen and (max-width: 1242px){
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 5%;
+    }
+
+    .intro {
+        max-width: 90%;
+        height:45vh;
+    }
+    
+    .hero-image {
+        margin-top: 0;
+        max-width: 80%;
+        height: auto;
+    }
+}
+

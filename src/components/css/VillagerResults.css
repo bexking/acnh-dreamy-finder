@@ -1,3 +1,7 @@
+.resultContainer {
+    margin-bottom: 5%;
+}
+
 .resultCard {
     margin-left: 3%;
     display: flex;
@@ -13,4 +17,45 @@
 .pTickets {
     display: flex;
     align-items: center;
+}
+
+.stats {
+    font-size: 24px;
+}
+
+.ticketBox {
+    border-radius: 50px;
+    border-width: thin;
+    border-color: #242038;
+    height: 50px;
+    width: 80px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.label {
+    margin-left: 1.5%;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 1242px) {
+    .resultCard {
+        flex-direction: column;
+    }
+
+    .vStats {
+        max-width: 60%;
+    }
+
+    .pTickets {
+        flex-direction: column;
+    }
+
+    h3 {
+        text-align: left;
+    }
+
+    .resultContainer {
+        margin-bottom: 10%;
+    }
 }

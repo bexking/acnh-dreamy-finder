@@ -31,28 +31,30 @@ export default function VillagerResults({selectedVillagers, dreamy, villagerInfo
     
 
     return (
-        <div className="resultCard">
-            <div className = "vImage">
-                <h3>{dreamyDeets.name["name-USen"]}</h3> 
-                <img className="vImage" src={dreamyDeets.image_uri} alt={`${dreamyDeets.name["name-USen"]} image`} />
-            </div>
-
-            <div className = "vStats">
-                <p>{dreamyDeets.name["name-USen"]} is one of {numInSpecies.length} {dreamyDeets.species.toLowerCase()}s in Animal Crossing: New Horizons.<br />
-                You have {sVillagerSameSp.length} {dreamyDeets.species.toLowerCase()}s on your island already. <br />
-                There is a {pEachIsland}% chance you will find {dreamyDeets.name["name-USen"]} on each Mystery Island Tour.
-                </p>
-
-                <div className="pTickets">
-                    {/* Type how many Nook Mile Tickets you have to see your overall chance: */}
-                    <h3></h3>
-                    <input type="number" value={tLookup} onChange={e => setTLookup(e.target.value)}></input>
-                    <label> tickets = </label>
-                    {/* total% */}
-                    <h3> &nbsp;{pWithTickets}%</h3>
-                    <p>chance overall</p>
+        <div className="resultContainer">
+            <div className="resultCard">
+                <div className = "vImage">
+                    <h3>{dreamyDeets.name["name-USen"]}</h3> 
+                    <img className="vImage" src={dreamyDeets.image_uri} alt={`${dreamyDeets.name["name-USen"]} image`} />
                 </div>
 
+                <div className = "vStats">
+                    <p className="stats">{dreamyDeets.name["name-USen"]} is one of {numInSpecies.length} {dreamyDeets.species.toLowerCase()}s in Animal Crossing: New Horizons.<br />
+                    You have {sVillagerSameSp.length} {dreamyDeets.species.toLowerCase()}s on your island already. <br />
+                    There is a {pEachIsland}% chance you will find {dreamyDeets.name["name-USen"]} on each Mystery Island Tour.
+                    </p>
+
+                    <h3>Type the number of Nook Miles Tickets you'll use to see the combined chance of finding your dreamies:</h3>
+
+                    <div className="pTickets">
+                        <input className="ticketBox" type="number" value={tLookup} onChange={e => setTLookup(e.target.value)}></input>
+                        <label className="label"> tickets = </label>
+                        {/* total% */}
+                        <h3> &nbsp;{pWithTickets}%</h3>
+                        <p className="label">chance overall</p>
+                    </div>
+
+                </div>
             </div>
         </div>
     )
