@@ -56,6 +56,7 @@ export default function VillagerResults({selectedVillagers, dreamy, villagerInfo
 
                 </div>
             </div>
+            <hr className="divider"/>
         </div>
     )
 }
