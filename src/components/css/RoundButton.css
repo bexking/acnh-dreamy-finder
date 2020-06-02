@@ -5,9 +5,9 @@
 }
 
 .circ--selected {
-    stroke:#61A0AF;
-    stroke-width: 4;
-    fill: white;
+    stroke:#242038;
+    stroke-width: 3.5;
+    fill: #FFFFF5;
 }
 
 .ButtonContainer {

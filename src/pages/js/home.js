@@ -8,7 +8,10 @@ export default function Home({setSelectedVillagers, setSelectedDrVillagers}) {
     return (
         <div className="content">
             <div className="intro">
-                <p className="intro-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <p className="intro-item">It can be hard work find the villager you’re looking for when you’re villager hunting!
+                <br/> 
+                <br/> 
+                Dreamy Finder is a tool to help you discover the likelihood of finding your favourite Animal Crossing: New Horizons villager on a Mystery Island Tours, and help you work out how many Nook Mile Tickets to save up. </p>
                 <Link to="/CurrentVillager" className="intro-item" onClick={() => {
                     setSelectedVillagers([]);
                     setSelectedDrVillagers([]);

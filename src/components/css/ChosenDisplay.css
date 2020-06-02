@@ -18,14 +18,6 @@
 
 }
 
-/* .Villagers {
-    width: 93%;
-    display: block;
-    margin-left: 5%;
-    margin-right: auto;
-    margin-bottom: 3.5%;
-} */
-
 .Villagers{
     display: flex;
     flex-wrap: wrap;
