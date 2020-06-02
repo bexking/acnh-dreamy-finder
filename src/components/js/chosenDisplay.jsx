@@ -75,7 +75,7 @@ export default function ChosenDisplay({spaces, selectedVillagers, setSelectedVil
             </div>
 
             <div className="textSearch">
-                <input className="vSearch" type="text" placeholder="Type villager name here" value={vLookup} onChange={e => setVLookup(e.target.value)}></input>
+                <input autoFocus className="vSearch" type="text" placeholder="Type villager name here" value={vLookup} onChange={e => setVLookup(e.target.value)}></input>
             </div>
 
 

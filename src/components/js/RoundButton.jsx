@@ -1,5 +1,6 @@
 import '../css/RoundButton.css';
 import React, { useState } from 'react';
+import placeholder from "../../assets/placeholder.png"
 
 const STYLES = [
     "circ--primary",
@@ -15,13 +16,13 @@ export const RoundButton = ({
         : STYLES[0];
 
     
-    const checkVillagerNumber = ((Number.isInteger(villager)) ? villager : 64);
+    const checkVillagerNumber = ((Number.isInteger(villager)) ? `http://acnhapi.com/icons/villagers/${villager}` : placeholder);
 
     return (
         <svg height="100" width="100" className={`btn ${checkRoundButtonStyle}`} onClick={onClick}>
             <defs>
                 <pattern id={`image${checkVillagerNumber}`} x="0" y="0" patternUnits="userSpaceOnUse" height="100" width="100" >
-                    <image x="0" y="-1" height="100" width="100" xlinkHref={`http://acnhapi.com/icons/villagers/${checkVillagerNumber}`}></image>
+                    <image x="8" y="8" height="85" width="85" xlinkHref={checkVillagerNumber}></image>
                 </pattern>
             </defs>
             <circle cx="50" cy="50" r="40" />
