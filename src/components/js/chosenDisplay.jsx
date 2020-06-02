@@ -67,7 +67,7 @@ export default function ChosenDisplay({spaces, selectedVillagers, setSelectedVil
                         type="button"
                         buttonStyle="btn--previous--solid"
                         buttonSize="btn--small"
-                        onClick={() => setSelectedVillagers([]) }
+                        onClick={() => {setSelectedVillagers([]); setSelectedButton(0); }}
                     >Clear All
                     </Button>
                 </div>

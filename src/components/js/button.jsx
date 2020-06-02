@@ -1,6 +1,7 @@
 import React from 'react'
 import '../css/button.css';
 
+/*Followed tutorial by Skillthrive found at https://www.youtube.com/watch?v=JfNjGLGaxR4*/
 
 const STYLES = [
     "btn--primary--solid",

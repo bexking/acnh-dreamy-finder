@@ -27,6 +27,9 @@
     margin-right: 2.5%;
     margin-top: 1%;
     margin-bottom: 4%;
+    max-height: 37vh;
+    overflow:scroll;
+    overflow-x:hidden;
 }
 
 .villagerOptions {
@@ -59,6 +62,14 @@
     margin-left: auto;
     margin-right: auto;
     text-indent: 1%;
+}
+
+@media only screen and (max-width: 1242px) {
+    .Villagers{
+        max-height: none;
+        overflow: none;
+        overflow-x: none;
+    }
 }
 
 
