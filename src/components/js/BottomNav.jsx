@@ -7,7 +7,7 @@ import { useLocation } from 'react-router-dom';
 export default function BottomNav({setSelectedVillagers, setSelectedDrVillagers}) {
     
     let location = useLocation().pathname;
-    console.log(location);
+
     let locations = ["/CurrentVillager", "/DreamVillager", "/Results"];
     let i = locations.indexOf(location);
 

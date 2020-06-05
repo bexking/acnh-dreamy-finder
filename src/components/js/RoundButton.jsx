@@ -16,7 +16,7 @@ export const RoundButton = ({
         : STYLES[0];
 
     
-    const checkVillagerNumber = ((Number.isInteger(villager)) ? `http://acnhapi.com/icons/villagers/${villager}` : placeholder);
+    const checkVillagerNumber = ((Number.isInteger(villager)) ? require(`../../assets/icons/villagers/${villager}.png`) : placeholder);
 
     return (
         <svg height="100" width="100" className={`btn ${checkRoundButtonStyle}`} onClick={onClick}>

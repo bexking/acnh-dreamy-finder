@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../../components/js/header.jsx'
 import BottomNav from '../../components/js/BottomNav.jsx'
-import ChosenDisplay from '../../components/js/ChosenDisplay.jsx'
+import ChosenDisplay from '../../components/js/chosenDisplay.jsx'
 
 export default function DreamVillager({selectedVillagers, setSelectedVillagers, villagerInfo, prevSelectedVillagers}) {
     return (

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../css/ChosenDisplay.css';
-import { RoundButton } from '../../components/js/RoundButton';
-import { Button } from '../../components/js/button';
+import { RoundButton } from './RoundButton';
+import { Button } from './button';
 
 export default function ChosenDisplay({spaces, selectedVillagers, setSelectedVillagers, villagerInfo, prevSelectedVillagers}) {
     const [selectedButton, setSelectedButton] = useState(0);
@@ -15,6 +15,9 @@ export default function ChosenDisplay({spaces, selectedVillagers, setSelectedVil
             let newSelectedVillagers = selectedVillagers.slice();
             newSelectedVillagers[selectedButton]=id;
             setSelectedVillagers(newSelectedVillagers);
+            setVLookup("");
+            document.getElementById("nameInput").focus()
+
             if (selectedButton < spaces-1) 
             {
                 setSelectedButton(selectedButton+1);
@@ -75,7 +78,7 @@ export default function ChosenDisplay({spaces, selectedVillagers, setSelectedVil
             </div>
 
             <div className="textSearch">
-                <input autoFocus className="vSearch" type="text" placeholder="Type villager name here" value={vLookup} onChange={e => setVLookup(e.target.value)}></input>
+                <input autoFocus id="nameInput" className="vSearch" type="text" placeholder="Type villager name here" value={vLookup} onChange={e => setVLookup(e.target.value)}></input>
             </div>
 
 

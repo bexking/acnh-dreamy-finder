@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from "react-router-dom";
 import "../css/nav.css";
 import homeIcon from "../../assets/home-selected.png"
@@ -6,6 +6,7 @@ import homeIcon2 from "../../assets/home-unselected.png"
 import { useLocation } from 'react-router-dom';
 
 export default function Nav({setSelectedVillagers, setSelectedDrVillagers}) {
+    const [isMouseOver, setIsMouseOver] = useState(false);
 
     let location = useLocation().pathname;
     let pageCheck = location == "/home" ? "selectedPage" : "unselected";
@@ -24,7 +25,7 @@ export default function Nav({setSelectedVillagers, setSelectedDrVillagers}) {
     return (
         <div className="main-nav">
             <Link to="/home" className={`nav-item ${pageCheck}`}>
-                <img id="home-img" src={homeImg} alt="Home"/>
+                <img id="home-img" src={isMouseOver ? homeIcon : homeImg} alt="Home"  onMouseEnter={() => setIsMouseOver(true)} onMouseLeave={() => setIsMouseOver(false)}/>
             </Link>
             <Link to="/CurrentVillager" className={`nav-item ${pageCheck2}`} onClick={()=>{
                     setSelectedVillagers([]);

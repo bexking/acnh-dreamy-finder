@@ -72,4 +72,6 @@
     }
 }
 
-
+input:focus {
+    outline-width: 0;
+}
