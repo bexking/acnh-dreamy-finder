@@ -40,6 +40,10 @@ label {
   margin-bottom: 2%;
 }
 
+a {
+  color: #31707F;
+}
+
 @media only screen and (max-width: 1242px) {
   h2{
     font-size: 18px;
