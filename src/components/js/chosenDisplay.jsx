@@ -48,7 +48,7 @@ export default function ChosenDisplay({spaces, selectedVillagers, setSelectedVil
     })
 
     return (
-        <div>
+        <>
             <div className="ButtonContainer">
             
                 {buttons}
@@ -86,6 +86,6 @@ export default function ChosenDisplay({spaces, selectedVillagers, setSelectedVil
                     {villagers}
             </div>
             
-        </div>
+        </>
     )
 }

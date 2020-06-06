@@ -33,6 +33,7 @@
 }
 
 .villagerOptions {
+    height: 136px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,6 +63,40 @@
     margin-left: auto;
     margin-right: auto;
     text-indent: 1%;
+}
+
+/**
+  Each row is 136 pixels, so add an extra row depending on screen size.
+  Is there a better way of doing this??
+*/
+@media only screen and (min-height: 808px) {
+    .Villagers {
+        max-height: calc(136px * 2);
+    }
+}
+
+@media only screen and (min-height: 944px) {
+    .Villagers {
+        max-height: calc(136px * 3);
+    }
+}
+
+@media only screen and (min-height: 1080px) {
+    .Villagers {
+        max-height: calc(136px * 4);
+    }
+}
+
+@media only screen and (min-height: 1216px) {
+    .Villagers {
+        max-height: calc(136px * 5);
+    }
+}
+
+@media only screen and (min-height: 1352px) {
+    .Villagers {
+        max-height: calc(136px * 6);
+    }
 }
 
 @media only screen and (max-width: 1242px) {
