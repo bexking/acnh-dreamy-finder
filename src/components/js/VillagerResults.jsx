@@ -49,7 +49,7 @@ export default function VillagerResults({selectedVillagers, dreamy, villagerInfo
             <div className="resultCard">
                 <div className = "vImage">
                     <h3>{dreamyDeets.name["name-USen"]}</h3>
-                    <img className="vImage" src={dreamyDeets.image_uri} alt={`${dreamyDeets.name["name-USen"]} image`} />
+                    <img className="vImage" src={require(`../../assets/images/villagers/${dreamy}.png`)} alt={`${dreamyDeets.name["name-USen"]} image`} />
                 </div>
 
                 <div className = "vStats">
