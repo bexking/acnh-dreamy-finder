@@ -6,7 +6,7 @@ import VillagerResults from '../../components/js/VillagerResults.jsx'
 export default function Results({villagerInfo, selectedVillagers, selectedDrVillagers, setSelectedVillagers, setSelectedDrVillagers}) {
 
     let eachDreamy = selectedDrVillagers.map(dreamy => {
-      return <VillagerResults villagerInfo={villagerInfo} selectedVillagers={selectedVillagers} dreamy={dreamy}/>
+      return <VillagerResults key={dreamy} villagerInfo={villagerInfo} selectedVillagers={selectedVillagers} dreamy={dreamy}/>
     });
 
     if (selectedDrVillagers.length === 0) {
