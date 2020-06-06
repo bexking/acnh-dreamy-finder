@@ -4,8 +4,8 @@ import { Button } from './button';
 import { Link } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
 
-export default function BottomNav({setSelectedVillagers, setSelectedDrVillagers}) {
-    
+export default function BottomNav({nextDisabled, setSelectedVillagers, setSelectedDrVillagers}) {
+
     let location = useLocation().pathname;
 
     let locations = ["/CurrentVillager", "/DreamVillager", "/Results"];
@@ -28,6 +28,7 @@ export default function BottomNav({setSelectedVillagers, setSelectedDrVillagers}
                     type="button"
                     buttonStyle="btn--next--solid"
                     buttonSize="btn--medium"
+                    disabled={nextDisabled}
                 >Next Step
                 </Button>
             </Link>}
@@ -46,8 +47,3 @@ export default function BottomNav({setSelectedVillagers, setSelectedDrVillagers}
         </div>
     )
 }
-
-
-/* to go on dreamy finder pages. Fixed at bottom. Buttons per page.""*/
-
-/* needs to get current location, if the location is 0, don't show back button. Back button location -1. Next button location +1. Results page [3] button updates to say home*/

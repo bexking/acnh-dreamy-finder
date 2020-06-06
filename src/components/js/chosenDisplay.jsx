@@ -60,8 +60,8 @@ export default function ChosenDisplay({spaces, selectedVillagers, setSelectedVil
                         buttonSize="btn--small"
                         onClick={() => {
                             let newSelectedVillagers = selectedVillagers.slice();
-                            newSelectedVillagers[selectedButton]=undefined;
-                            setSelectedVillagers(newSelectedVillagers); 
+                            newSelectedVillagers.splice(selectedButton, 1);
+                            setSelectedVillagers(newSelectedVillagers);
                         }}
                     >Clear Selected
                     </Button>

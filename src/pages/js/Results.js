@@ -9,6 +9,10 @@ export default function Results({villagerInfo, selectedVillagers, selectedDrVill
       return <VillagerResults villagerInfo={villagerInfo} selectedVillagers={selectedVillagers} dreamy={dreamy}/>
     });
 
+    if (selectedDrVillagers.length === 0) {
+        window.location.replace("/");
+    }
+
     return (
         <div>
             <Header />
