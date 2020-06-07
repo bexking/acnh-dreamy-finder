@@ -11,7 +11,7 @@ export default function about() {
             <p>See that post <a href="https://www.belltreeforums.com/threads/mystery-island-rng-pattern-solved-with-data-and-stats-tests.511329/">here.</a></p>
             <br />
             <p>
-            Through datamining and chi squares they discoverd villagers are rolled first for species - 1/35. After that it rolls for the villager of that species, so the amount of villagers in a species really impacts the probability. The probability of finding a specific octopus is much higher than finding a specific cat, as there are only 3 octopi, but 29 cats!
+            Through data mining and chi squares they discoverd villagers are rolled first for species - 1/35. After that it rolls for the villager of that species, so the amount of villagers in a species really impacts the probability. The probability of finding a specific octopus is much higher than finding a specific cat, as there are only 3 octopi, but 29 cats!
             </p>
             <p>
             The villager that appears on a mystery island is not affected in any way by the villager’s personality type, and you are able to see a villager that has just moved off your island on a mystery island. The only villagers you won’t be able to see are the villagers you already have!
