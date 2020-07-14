@@ -21,12 +21,12 @@ export const RoundButton = ({
     return (
         <svg height="100" width="100" className={`btn ${checkRoundButtonStyle}`} onClick={onClick}>
             <defs>
-                <pattern id={`image${checkVillagerNumber}`} x="0" y="0" patternUnits="userSpaceOnUse" height="100" width="100" >
+                <pattern id={`image${villager}`} x="0" y="0" patternUnits="userSpaceOnUse" height="100" width="100" >
                     <image x="8" y="8" height="85" width="85" xlinkHref={checkVillagerNumber}></image>
                 </pattern>
             </defs>
             <circle cx="50" cy="50" r="40" />
-            <circle cx="50" cy="50" r="40" fill={`url(#image${checkVillagerNumber})`}/>
+            <circle cx="50" cy="50" r="40" fill={`url(#image${villager})`}/>
             <title>{`${name} icon`}</title>
         </svg>
     )
