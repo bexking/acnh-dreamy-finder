@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+
 .resultContainer {
     margin-bottom: 2%;
 }
@@ -32,6 +34,8 @@
     width: 80px;
     font-size: 24px;
     text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
 }
 
 .label {

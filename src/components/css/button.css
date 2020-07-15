@@ -22,7 +22,7 @@
     color: #242038;
     border-radius: 50px;
     border-color: #61A0AF;
-    border-width: medium;
+    border: 3px solid #61A0AF;
     padding: 3%;
 }
 
@@ -30,7 +30,7 @@
     background-color: var(--primary);
     border-radius: 50px;
     border-color: #61A0AF;
-    border-width: medium;
+    border: 3px solid #61A0AF;
     padding: 3%;
 }
 
@@ -38,7 +38,7 @@
     background-color: var(--previous);
     border-radius: 50px;
     border-color: #61A0AF;;
-    border-width: medium;
+    border: 1.5px solid #61A0AF;
     padding: 3%;
 }
 
