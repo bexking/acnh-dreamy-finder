@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "195bc2c2ddcaf400b7b200917780b643",
+    "revision": "b8d8b339354f7625f342751d8c08475e",
     "url": "/acnh-dreamy-finder/index.html"
   },
   {
-    "revision": "a8bc7b420aada2bf6f62",
-    "url": "/acnh-dreamy-finder/static/css/main.42c48c13.chunk.css"
+    "revision": "ca31b65f1b17f358eb35",
+    "url": "/acnh-dreamy-finder/static/css/main.254ca6df.chunk.css"
   },
   {
     "revision": "cb27930c087665b525b5",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/acnh-dreamy-finder/static/js/2.bd49024f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a8bc7b420aada2bf6f62",
+    "revision": "ca31b65f1b17f358eb35",
     "url": "/acnh-dreamy-finder/static/js/main.c64b3557.chunk.js"
   },
   {
