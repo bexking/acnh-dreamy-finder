@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/acnh-dreamy-finder/static/css/main.48534d4b.chunk.css",
+    "main.css": "/acnh-dreamy-finder/static/css/main.b15cc7af.chunk.css",
     "main.js": "/acnh-dreamy-finder/static/js/main.04c487ea.chunk.js",
     "main.js.map": "/acnh-dreamy-finder/static/js/main.04c487ea.chunk.js.map",
     "runtime-main.js": "/acnh-dreamy-finder/static/js/runtime-main.abd09a33.js",
@@ -8,9 +8,9 @@
     "static/js/2.bd49024f.chunk.js": "/acnh-dreamy-finder/static/js/2.bd49024f.chunk.js",
     "static/js/2.bd49024f.chunk.js.map": "/acnh-dreamy-finder/static/js/2.bd49024f.chunk.js.map",
     "index.html": "/acnh-dreamy-finder/index.html",
-    "precache-manifest.3bfaac4882742c8d9d21a127dfd67ab9.js": "/acnh-dreamy-finder/precache-manifest.3bfaac4882742c8d9d21a127dfd67ab9.js",
+    "precache-manifest.c42422a4a59ea00d7a546bdbb3414fa7.js": "/acnh-dreamy-finder/precache-manifest.c42422a4a59ea00d7a546bdbb3414fa7.js",
     "service-worker.js": "/acnh-dreamy-finder/service-worker.js",
-    "static/css/main.48534d4b.chunk.css.map": "/acnh-dreamy-finder/static/css/main.48534d4b.chunk.css.map",
+    "static/css/main.b15cc7af.chunk.css.map": "/acnh-dreamy-finder/static/css/main.b15cc7af.chunk.css.map",
     "static/js/2.bd49024f.chunk.js.LICENSE.txt": "/acnh-dreamy-finder/static/js/2.bd49024f.chunk.js.LICENSE.txt",
     "static/media/1.png": "/acnh-dreamy-finder/static/media/1.184994eb.png",
     "static/media/10.png": "/acnh-dreamy-finder/static/media/10.3ccfc981.png",
@@ -409,7 +409,7 @@
   "entrypoints": [
     "static/js/runtime-main.abd09a33.js",
     "static/js/2.bd49024f.chunk.js",
-    "static/css/main.48534d4b.chunk.css",
+    "static/css/main.b15cc7af.chunk.css",
     "static/js/main.04c487ea.chunk.js"
   ]
 }
