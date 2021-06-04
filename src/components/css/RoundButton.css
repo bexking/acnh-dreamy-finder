@@ -5,15 +5,16 @@
 }
 
 .circ--selected {
-    stroke:#242038;
+    stroke:#F4D06F;
     stroke-width: 3.5;
     fill: #FFFFF5;
+    filter: drop-shadow(0 1mm 1mm #b8ad91);
 }
 
-.ButtonContainer {
+/* .ButtonContainer {
     display: flex;
     justify-content: space-evenly;
-}
+} */
 
 image {
     opacity: 0.9;

@@ -49,11 +49,35 @@ export default function ChosenDisplay({spaces, selectedVillagers, setSelectedVil
 
     return (
         <>
+        <div className="bc-container">
             <div className="ButtonContainer">
-            
-                {buttons}
+                <div className="btn-group">
+                    {buttons}
+                </div>
 
-                <div className="ClearButtons">
+                {/* <div className="ClearButtons">
+                    <Button
+                        type="button"
+                        buttonStyle="btn--previous--solid"
+                        buttonSize="btn--small"
+                        onClick={() => {
+                            let newSelectedVillagers = selectedVillagers.slice();
+                            newSelectedVillagers.splice(selectedButton, 1);
+                            setSelectedVillagers(newSelectedVillagers);
+                        }}
+                    >Clear Selected
+                    </Button>
+
+                    <Button
+                        type="button"
+                        buttonStyle="btn--previous--solid"
+                        buttonSize="btn--small"
+                        onClick={() => {setSelectedVillagers([]); setSelectedButton(0); }}
+                    >Clear All
+                    </Button>
+                </div> */}
+            </div>
+            <div className="ClearButtons">
                     <Button
                         type="button"
                         buttonStyle="btn--previous--solid"
@@ -74,18 +98,17 @@ export default function ChosenDisplay({spaces, selectedVillagers, setSelectedVil
                     >Clear All
                     </Button>
                 </div>
-
-            </div>
+        </div>    
 
             <div className="textSearch">
                 <input autoFocus id="nameInput" className="vSearch" type="text" placeholder="Type villager name here" value={vLookup} onChange={e => setVLookup(e.target.value)}></input>
             </div>
 
-
-            <div className="Villagers">
-                    {villagers}
+            <div className="v-section-container">
+                <div className="Villagers">
+                        {villagers}
+                </div>
             </div>
-            
         </>
     )
 }

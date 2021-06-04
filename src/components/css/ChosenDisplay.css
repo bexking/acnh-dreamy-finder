@@ -1,12 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
 
 .ClearButtons {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   height: 80px;
+   margin-top: auto;
+   margin-bottom: auto;
+   padding-right: 3vw;
+   padding-left: 3vw;
 }
 
 .ButtonContainer {
+    /* background-color: #C0F3E3; */
+    /* border-radius: 80px; */
+    width: 85vw;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    grid-gap: 0.5rem;
+    justify-items: start;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw; */
+}
+
+.btn-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    grid-gap: 0.5rem;
+    justify-items: start;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5vw;
+    /* padding-right: 5vw; */
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+.bc-container {
+    margin-right: 3vw;
+    display: flex;
+    justify-content: left;
+    background-color: #C0F3E3;
+    border-radius: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95vw;
+}
+
+/* .ButtonContainer {
     background-color: #C0F3E3;
     border-radius: 50px;
     width: 93%;
@@ -15,10 +60,29 @@
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
+} */
 
+
+.Villagers {
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    grid-gap: 1rem;
+    /* grid-template-rows: 130px auto 130px; 
+    gap: 1px 8px; */
 }
 
-.Villagers{
+.v-section-container {
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+    max-height: 45vh;
+    overflow:scroll;
+    overflow-x:hidden;
+}
+
+/* .Villagers{
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
@@ -30,7 +94,8 @@
     max-height: 45vh;
     overflow:scroll;
     overflow-x:hidden;
-}
+    padding-bottom: 1%;
+} */
 
 .villagerOptions {
     height: 136px;
@@ -63,7 +128,10 @@
     margin-left: auto;
     margin-right: auto;
     text-indent: 1%;
+    filter: drop-shadow(0 1mm 1mm #c9c9c99f);
 }
+
+
 
 /**
   Each row is 136 pixels, so add an extra row depending on screen size.
@@ -72,6 +140,45 @@
 @media only screen and (min-height: 808px) {
     .Villagers {
         max-height: calc(136px * 2);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .bc-container {
+        align-items: center;
+        margin-bottom: 5%;
+    }
+
+    .ClearButtons {
+        margin-bottom: 5%;
+    }
+}
+
+@media only screen and (max-width: 730px) {
+    .bc-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-group {
+        padding-left: 0;
+    }
+
+    .ClearButtons {
+        margin-bottom: 5%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .btn-group {
+        grid-gap: 0.1rem;
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        padding-left: 0;
+        margin-top: 5%;
+    }
+
+    .ClearButtons {
+        margin-bottom: 5%;
     }
 }
 
