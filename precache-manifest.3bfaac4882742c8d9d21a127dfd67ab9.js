@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3c7e6c2467c4dad979fd2fb034596620",
+    "revision": "d38bd162df378ab8d15b3328a03f2678",
     "url": "/acnh-dreamy-finder/index.html"
   },
   {
