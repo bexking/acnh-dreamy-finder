@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/acnh-dreamy-finder/precache-manifest.ee98e046d30ee840e71eaebb01b6df2d.js"
+  "/acnh-dreamy-finder/precache-manifest.00ec78cd4e0d19641e27a6c18beae38b.js"
 );
 
 self.addEventListener('message', (event) => {
