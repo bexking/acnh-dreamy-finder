@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
+      <Router basename="/acnh-dreamy-finder">
           <Nav setSelectedVillagers={setSelectedVillagers} setSelectedDrVillagers={setSelectedDrVillagers}/>
           <Route path={"/(home|)"}
             render={()=> (<Home setSelectedVillagers={setSelectedVillagers} setSelectedDrVillagers={setSelectedDrVillagers}/>)}
